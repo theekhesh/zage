@@ -1,6 +1,23 @@
 # Zage
 
-A lightweight Rust download manager for Linux with a terminal UI.
+Zage is a lightweight, keyboard-driven download manager for Linux. It provides
+a terminal interface for starting, pausing, resuming, prioritizing, and
+monitoring downloads without requiring a graphical desktop environment.
+
+Written in Rust, Zage is designed for fast, persistent downloads from HTTP
+servers. It keeps queue state between sessions, supports resumable range
+downloads with up to eight segments per file, and can limit download speed
+globally.
+
+## Features
+
+- Terminal UI with a bordered, scrollable queue
+- Concurrent downloads with configurable priority
+- Pause, resume, retry, and remove actions
+- HTTP range support with resumable `.part` files
+- Queue and download state persisted locally
+- Global download speed limits
+- Progress, speed, and queue totals at a glance
 
 ## Build and run
 
@@ -36,3 +53,9 @@ kept in adjacent `.part` files until the download can be assembled.
 
 Torrent/magnet downloads, browser and media-link integration, scheduled
 downloads, and desktop GUI support are not implemented yet.
+
+## License
+
+Zage is licensed under the **GNU General Public License v3.0** (GPL-3.0).
+See [GNU.org](https://www.gnu.org/licenses/gpl-3.0.html) for the full license
+text.
